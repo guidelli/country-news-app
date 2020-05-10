@@ -1,0 +1,13 @@
+.cardsContainer {
+  border: 2px solid red;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 80%;
+  padding: 20px;
+
+  .cardGridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}

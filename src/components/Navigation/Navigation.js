@@ -1,12 +1,7 @@
-import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import React from "react";
 
 const Navigation = () => {
-  return (
-    <Box>
-      <Typography color='primary'>Hello</Typography>
-    </Box>
-  );
+  return <h1>Navigation</h1>;
 };
 
 export default Navigation;

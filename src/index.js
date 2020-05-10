@@ -1,16 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ThemeProvider } from '@material-ui/styles';
-import { lightTheme } from './theme/theme';
-import App from './App';
-
-console.log(lightTheme);
+import React from "react";
+import ReactDOM from "react-dom";
+import "./reset.scss";
+import App from "./App";
 
 ReactDOM.render(
-  <ThemeProvider theme={lightTheme}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ThemeProvider>,
-  document.getElementById('root')
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
