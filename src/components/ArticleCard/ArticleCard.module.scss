@@ -1,15 +1,19 @@
 // Importing global variables
-@import "../../utils/scssVariables/variables";
+@import '../../utils/scssVariables/variables';
 
 .card {
   position: relative;
-  width: 400px;
+  width: 80%;
+  max-width: 600px;
   height: 300px;
   margin-bottom: 20px;
-  transition: 0.4s ease-in-out all;
-  box-shadow: $box-shadow;
+  transition: 0.5s ease;
   border-radius: 5px;
+  box-shadow: $box-shadow;
+  background-color: $background;
   &:hover {
+    transform: translate3D(0, -3px, 0); /* move up slightly and zoom in */
+    transition: all 0.4s ease; /* zoom in */
     cursor: pointer;
   }
 
@@ -28,7 +32,9 @@
 
   .cardTitle {
     padding: 1rem;
+    background: $background;
     color: $main;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 
   .fixedFooter {

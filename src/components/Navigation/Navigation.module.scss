@@ -1,0 +1,38 @@
+// Importing global variables
+@import '../../utils/scssVariables/variables';
+
+.navbarContainer {
+  background-color: #eeeeee;
+
+  .navbarGrid {
+    max-width: 1200px;
+    width: 80%;
+    border: 2px solid red;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    .navLinks {
+      list-style: none;
+      display: flex;
+
+      .navLink {
+        a {
+          margin: 0.2rem;
+          padding: 1rem 1rem;
+          color: $main;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .newsPaperIcon {
+    font-size: 3rem;
+    color: $accent;
+  }
+}
