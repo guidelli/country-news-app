@@ -1,0 +1,64 @@
+// Importing global variables
+@import '../../utils/scssVariables/variables';
+
+.container {
+  margin-top: 10vh;
+  color: $main;
+  height: 90vh;
+  background: $background;
+  font-family: 'Roboto Condensed';
+  position: relative;
+
+  .heroPositionedContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    max-width: 1200px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    .heroImage {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .heroContent {
+      margin-bottom: 30%;
+      margin-right: 10%;
+      text-align: right;
+
+      .heroContentTitle {
+        font-weight: bold;
+        font-size: 2.75rem;
+      }
+
+      .heroContentBody {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      .buttonToCountries {
+        background: $accent;
+        color: $background;
+        font-size: 1.2rem;
+        border-radius: 25px;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+
+  .clipPathBackground {
+    height: 100%;
+    background-color: $main;
+    clip-path: polygon(0 69%, 100% 48%, 100% 100%, 0% 100%);
+  }
+}
