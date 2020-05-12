@@ -1,0 +1,19 @@
+// Importing global variables
+@import './utils/scssVariables/variables';
+
+.arrowToTop {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  background: $accent;
+  color: $background;
+  font-size: 4rem;
+  cursor: pointer;
+  transform: rotate(90deg);
+  transition: all 0.4s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: rotate(0);
+  }
+}

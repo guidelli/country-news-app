@@ -3,7 +3,12 @@ import styles from './ArticleCard.module.scss';
 
 export const ArticleCard = ({ story }) => {
   return (
-    <div className={styles.card}>
+    <a
+      href={`${story.url}`}
+      target='_blank'
+      rel='noopener noreferrer'
+      className={styles.card}
+    >
       <div className={styles.imageContainer}>
         <img className={styles.cardImage} src={story.urlToImage} alt='' />
       </div>
@@ -14,6 +19,6 @@ export const ArticleCard = ({ story }) => {
         <p>{new Date(story.publishedAt).toDateString()}</p>
         <p>{story.source.name}</p>
       </div>
-    </div>
+    </a>
   );
 };

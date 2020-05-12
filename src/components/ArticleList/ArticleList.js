@@ -1,21 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { fakeNews } from "./data";
-import styles from "./ArticleList.module.scss";
+import React, { useState, useEffect } from 'react';
+import styles from './ArticleList.module.scss';
+import { getArticles } from '../../utils/api/newsApi';
 
-import { ArticleCard } from "../ArticleCard/ArticleCard";
+import Spinner from '../Spinner/Spinner';
+import { ArticleCard } from '../ArticleCard/ArticleCard';
 
-const ArticleList = () => {
-  const [topStories, setTopStories] = useState(fakeNews);
+const ArticleList = ({ countryCode }) => {
+  const [topStories, setTopStories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   getArticles('us').then((data) => setTopStories(data));
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    getArticles(countryCode).then((data) => setTopStories(data));
+    setLoading(false);
+  }, [countryCode]);
+
+  if (loading) {
+    return (
+      <div className={styles.loading}>
+        <div className={styles.spinner}>
+          <Spinner />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.cardsContainer}>
       <div className={styles.cardGridContainer}>
         {topStories.map((story) => (
-          <ArticleCard story={story} />
+          <ArticleCard key={story.author} story={story} />
         ))}
       </div>
     </div>

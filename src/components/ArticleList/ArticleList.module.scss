@@ -1,8 +1,11 @@
+// Importing global variables
+@import '../../utils/scssVariables/variables';
+
 .cardsContainer {
-  border: 2px solid red;
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   max-width: 1600px;
   width: 80%;
+  font-family: 'Titillium Web';
   @media only screen and (max-width: 700px) {
     width: 100%;
   }
@@ -14,5 +17,20 @@
     @media only screen and (max-width: 500px) {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+.loading {
+  position: relative;
+  background: $main;
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100vw;
+
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

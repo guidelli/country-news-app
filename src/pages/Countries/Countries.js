@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Countries = () => {
-  return (
-    <div>
-      <h1>Countries</h1>
-    </div>
-  );
+import CountryList from '../../components/CountryList/CountryList';
+
+const Countries = ({ countries }) => {
+  return <CountryList countries={countries} />;
 };
 
 export default Countries;
