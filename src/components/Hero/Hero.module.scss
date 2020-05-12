@@ -1,12 +1,12 @@
 // Importing global variables
-@import '../../utils/scssVariables/variables';
+@import "../../utils/scssVariables/variables";
 
 .container {
   margin-top: 10vh;
   color: $main;
   height: 90vh;
   background: $background;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed";
   position: relative;
 
   .heroPositionedContainer {
@@ -58,6 +58,23 @@
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
             0 6px 6px rgba(0, 0, 0, 0.23);
         }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      align-items: center;
+      padding: 2rem 0;
+
+      .heroContent {
+        text-align: center;
+        margin: 0;
+        margin-top: 2rem;
+      }
+
+      .heroImage {
+        width: 300px;
       }
     }
   }
