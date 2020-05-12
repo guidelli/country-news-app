@@ -4,6 +4,17 @@
     url(./fonts/TitilliumWeb-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: local('Roboto Condensed'),
+    url(./fonts/RobotoCondensed-Regular.ttf) format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;

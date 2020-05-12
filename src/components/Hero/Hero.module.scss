@@ -1,12 +1,12 @@
 // Importing global variables
-@import "../../utils/scssVariables/variables";
+@import '../../utils/scssVariables/variables';
 
 .container {
   margin-top: 10vh;
   color: $main;
   height: 90vh;
   background: $background;
-  font-family: "Roboto Condensed";
+  font-family: 'Roboto Condensed';
   position: relative;
 
   .heroPositionedContainer {
@@ -70,7 +70,15 @@
       .heroContent {
         text-align: center;
         margin: 0;
-        margin-top: 2rem;
+        margin-top: 4rem;
+
+        .heroContentTitle {
+          font-size: 2rem;
+        }
+
+        .heroContentBody {
+          font-size: 1rem;
+        }
       }
 
       .heroImage {
