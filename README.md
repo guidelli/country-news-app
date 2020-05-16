@@ -4,4 +4,4 @@ TODO:
 
 - [ ] Refactoring the mobile UI
 - [ ] Adding search bar to countries page so that you can filter the list
-- [ ] Add Redux to fetch all articles on initial load of the countries page
+- [ ] Hide the "to top" arrow on the left side of the screen until a user scrolls
